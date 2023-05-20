@@ -1,13 +1,12 @@
-Author: Nik Alleyne<br>
-Author Blog:    https://www.securitynik.com <br>
-Author GitHub:  github.com/securitynik <br>
+Author: Nik Alleyne
+Author Blog:    https://www.securitynik.com
+Author GitHub:  github.com/securitynik
 Author Books: 
         [ 
                 
                 "https://www.amazon.ca/Learning-Practicing-Leveraging-Practical-Detection/dp/1731254458/", 
                 "https://www.amazon.ca/Learning-Practicing-Mastering-Network-Forensics/dp/1775383024/"
         ]
-
 
 This post is part of my beginning machine learning series. 
 The series includes the following:
@@ -65,20 +64,11 @@ SEC503 SEC503: Network Monitoring and Threat Detection In-Depth
 
 Here are also some blog posts on using Zeek for security monitoring
 Installing Zeek: 
-
         https://www.securitynik.com/2020/06/installing-zeek-314-on-ubuntu-2004.html
 
 Detecting PowerShell Empire Usage: 
-
         https://www.securitynik.com/2022/02/powershell-empire-detection-with-zeek.html
 
 Detecting Log4J Vulnerability Exploitation: 
-
         https://www.securitynik.com/2021/12/continuing-log4shell-zeek-detection.html
 
-
-        https://www.securitynik.com/2022/02/powershell-empire-detection-with-zeek.html
-
-Detecting Log4J Vulnerability Exploitation: 
-
-        https://www.securitynik.com/2021/12/continuing-log4shell-zeek-detection.html
