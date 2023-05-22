@@ -27,7 +27,7 @@ The series includes the following:
 06 - Beginning Data Scaling
 07 - Beginning Principal Component Analysis (PCA)
 08 - Beginning Machine Learning Anomaly Detection - Isolation Forest and Local Outlier Factor
-09 - Beginning Unsupervised Machine Learning - Clustering - KMeans and DBSCAN
+09 - Beginning Unsupervised Machine Learning - Clustering - K-means and DBSCAN
 10 - Beginning Supervise Learning - Machine Learning - Logistic Regression, Decision Trees and Metrics
 11 - Beginning Linear Regression - Machine Learning
 12 - Beginning Deep Learning - Anomaly Detection with AutoEncoders, Tensorflow
