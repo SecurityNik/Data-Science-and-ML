@@ -1,0 +1,2 @@
+model_checkpoint_path: "conv2d-weights"
+all_model_checkpoint_paths: "conv2d-weights"
