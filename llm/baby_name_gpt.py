@@ -10,7 +10,7 @@ I will stick with my baby names dataset to keep this simple
 References:
 https://docs.python.org/3/library/argparse.html
 
-/stuff$ clear && python3 baby_name_gpt.py --filename names.txt --d_model=32 --n_heads=4 --n_layers=2 --epochs=1 --batch_size=64
+$ clear && python3 baby_name_gpt.py --filename names.txt --d_model=32 --n_heads=4 --n_layers=2 --epochs=10000 --temperature=1.3 --top_p=0.90
 
 '''
 
@@ -36,9 +36,9 @@ arg_parser.add_argument('-n', '--n_heads', type=int, help='Number of heads')
 arg_parser.add_argument('-l', '--n_layers', type=int, help='Number of layers')
 arg_parser.add_argument('-e', '--epochs', type=int, help='Number of training ')
 arg_parser.add_argument('-b', '--batch_size', type=int, help='Batch size')
-arg_parser.add_argument('-t', '--temperature', type=int, help='temperature')
+arg_parser.add_argument('-t', '--temperature', type=float, help='temperature')
 arg_parser.add_argument('-k', '--top_k', type=int, help='top_k')
-arg_parser.add_argument('-p', '--top_p', type=int, help='top_p')
+arg_parser.add_argument('-p', '--top_p', type=float, help='top_p')
 
 args = arg_parser.parse_args()
 
@@ -329,7 +329,7 @@ class GPT(nn.Module):
             probs = F.softmax(logits, dim=-1)
 
             # Based on the probabilities, sample the next token
-            next_token = torch.multinomial(input=probs, num_samples=1, replacement=False) # (B, 1)
+            next_token = torch.multinomial(input=probs, num_samples=1, replacement=True) # (B, 1)
             
             # Append to the existing sequence
             idx = torch.cat((idx, next_token), dim=-1)
@@ -481,7 +481,7 @@ def main():
     new_line_token = stoi['\n']
     start_token = torch.tensor([[new_line_token]], dtype=torch.long)
 
-    generated = model._generate(idx=start_token, new_line_token=new_line_token, temperature=temperature, max_new_tokens=50)
+    generated = model._generate(idx=start_token, new_line_token=new_line_token, max_new_tokens=50)
 
     name = ''.join([ itos[i.item()] for i in generated[0] ])
     print(f'{name}')
